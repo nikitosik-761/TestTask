@@ -2,9 +2,7 @@ package com.testApp.testApp.services;
 
 import com.testApp.testApp.exceptions.ResourceNotFound;
 import com.testApp.testApp.models.Home;
-import com.testApp.testApp.models.User;
 import com.testApp.testApp.repositories.HomeRepo;
-import com.testApp.testApp.repositories.UserRepo;
 import com.testApp.testApp.utils.HomeRegistrationRequest;
 import com.testApp.testApp.utils.HomeUpdateRequest;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +15,7 @@ import java.util.List;
 public class HomeService {
 
     private final HomeRepo homeRepo;
-    private final UserRepo userRepo;
+
 
 
     public List<Home> findAllHomes(){

@@ -10,6 +10,8 @@ import com.testApp.testApp.utils.UserUpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -87,11 +89,18 @@ public class UserService {
                 () -> new ResourceNotFound("Not found")
         );
 
-        Set<User> userSet = home.getUsers();
+        Set<User> updatedUserSet = new HashSet<>(home.getUsers());
 
-        userSet.add(userToAdd);
+        if (updatedUserSet.isEmpty()) {
+            updatedUserSet = Set.of(userToAdd);
+        } else {
+            updatedUserSet.add(userToAdd);
+        }
+
+        home.setUsers(updatedUserSet);
 
         homeRepo.save(home);
+
 
     }
 }
