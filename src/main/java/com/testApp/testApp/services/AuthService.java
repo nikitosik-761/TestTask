@@ -41,7 +41,9 @@ public class AuthService {
         );
 
         User user = repo.findByUsername(request.username())
-                .orElseThrow();
+                .orElseThrow(
+                        () -> new RuntimeException("Not found")
+                );
         var jwtToken = jwtService.generateToken(user);
         return new AuthenticationResponse(jwtToken);
     }

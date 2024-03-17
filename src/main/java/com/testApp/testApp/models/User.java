@@ -41,8 +41,11 @@ public class User implements UserDetails {
     private String password;
 
 
+    /*
     @ManyToMany(mappedBy = "users")
     private List<Home> homes;
+
+     */
 
 
     @Override
