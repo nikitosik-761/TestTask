@@ -14,8 +14,8 @@ CREATE TABLE Home(
 
 
 CREATE TABLE Home_Usr (
-   usr_id BIGINT REFERENCES Usr(id) ON DELETE SET NULL,
-   home_id BIGINT REFERENCES Home(id) ON DELETE SET NULL,
+   usr_id BIGINT REFERENCES Usr(id),
+   home_id BIGINT REFERENCES Home(id),
    primary key (usr_id,home_id)
 );
 
