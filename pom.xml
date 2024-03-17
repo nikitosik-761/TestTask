@@ -10,14 +10,20 @@
 	</parent>
 	<groupId>com.testApp</groupId>
 	<artifactId>testApp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>testApp</name>
 	<description>Demo project for Spring Boot</description>
+
+
 	<properties>
 		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<docker.username>nikitosbarbos</docker.username>
-		<docker.image.name>testTask-api</docker.image.name>
+		<docker.image.name>nikitosbarbos-api</docker.image.name>
 	</properties>
+
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
