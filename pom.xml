@@ -20,7 +20,7 @@
 		<maven.compiler.source>17</maven.compiler.source>
 		<maven.compiler.target>17</maven.compiler.target>
 		<docker.username>nikitosbarbos</docker.username>
-		<docker.image.name>nikitosbarbosTest-api</docker.image.name>
+		<docker.image.name>testtask-api</docker.image.name>
 	</properties>
 
 
